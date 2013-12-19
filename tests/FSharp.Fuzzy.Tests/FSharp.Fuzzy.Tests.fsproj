@@ -61,6 +61,7 @@
     <Compile Include="IntervalTest.fs" />
     <None Include="packages.config" />
     <None Include="app.config" />
+    <Compile Include="FuzzyTest.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Charting">

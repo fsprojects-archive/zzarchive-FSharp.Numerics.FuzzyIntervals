@@ -1,4 +1,4 @@
-﻿module FSharp.Fuzzy.Tests
+﻿module FSharp.Fuzzy.Tests.Interval
 
 open FSharp.Fuzzy
 open NUnit.Framework
@@ -6,33 +6,45 @@ open FsUnit
 
 [<Test>] 
 let Middle () = 
-    {a = 1.; b = 23.}.Middle |> should equal 12.
-    {a = 10.; b = 10.}.Middle |> should equal 10.
-    {a= -10.; b = 10.}.Middle |> should equal 0.
-    {a= -10.; b = -2.}.Middle |> should equal -6.
+    {a = 1m; b = 23m}.Middle |> should equal 12m
+    {a = 10m; b = 10m}.Middle |> should equal 10m
+    {a= -10m; b = 10m}.Middle |> should equal 0m
+    {a= -10m; b = -2m}.Middle |> should equal -6m
 
 [<Test>] 
 let Multiply () = 
-    {a = 1.; b = 23.} * { a = 1.; b = 2. } |> should equal { a= 1.; b = 46. }
-    {a = -2.; b = 2.} * { a = 2.; b = 3. } |> printf "%A"
-    {a = -2.; b = 2.} * { a = 2.; b = 3. } |> should equal { a= -6.; b = 6. }
-    2. * {a = -2.; b = 2.} * 2. |> should equal { a= -8.; b = 8. }
+    {a = 1m; b = 23m} * { a = 1m; b = 2m } |> should equal { a= 1m; b = 46m }
+    {a = -2m; b = 2m} * { a = 2m; b = 3m } |> printf "%A"
+    {a = -2m; b = 2m} * { a = 2m; b = 3m } |> should equal { a= -6m; b = 6m }
+    2m * {a = -2m; b = 2m} * 2m |> should equal { a= -8m; b = 8m }
 
 [<Test>] 
 let Divide () = 
-    {a = 1.; b = 23.} / { a = 1.; b = 2. } |> should equal { a= 0.5; b = 23. }
-    {a = -2.; b = 2.} / { a = 2.; b = 3. } |> should equal { a= -1.; b = 1. }
-    8. / { a = 2.; b = 4. } / 2. |> should equal { a= 1.; b = 2. }
-    (fun ()-> {a = -2.; b = 2.} / { a = -2.; b = 3. } |> ignore) |> should throw typeof<System.Exception> 
+    {a = 1m; b = 23m} / { a = 1m; b = 2m } |> should equal { a= 0.5m; b = 23m }
+    {a = -2m; b = 2m} / { a = 2m; b = 3m } |> should equal { a= -1m; b = 1m }
+    8m / { a = 2m; b = 4m } / 2m |> should equal { a= 1m; b = 2m }
+    (fun ()-> {a = -2m; b = 2m} / { a = -2m; b = 3m } |> ignore) |> should throw typeof<System.Exception> 
 
 [<Test>] 
 let summation () = 
-    {a = 1.; b = 23.} + { a = 1.; b = 2. } |> should equal { a= 2.; b = 25. }
-    {a = -2.; b = 2.} + { a = 2.; b = 3. } |> should equal { a= 0.; b = 5. }
-    1. + {a = -2.; b = 2.} + 3.  |> should equal { a= 2.; b = 6. }
+    {a = 1m; b = 23m} + { a = 1m; b = 2m } |> should equal { a= 2m; b = 25m }
+    {a = -2m; b = 2m} + { a = 2m; b = 3m } |> should equal { a= 0m; b = 5m }
+    1m + {a = -2m; b = 2m} + 3m  |> should equal { a= 2m; b = 6m }
     
 [<Test>] 
 let substraction () = 
-    {a = 1.; b = 23.} - { a = 1.; b = 2. } |> should equal { a= -1.; b = 22. }    
-    {a = -2.; b = 2.} - { a = 2.; b = 3. } |> should equal { a= -5.; b =0. }
-    8. - {a = -2.; b = 2.} - 3. |> should equal { a= 3.; b = 7. }
+    {a = 1m; b = 23m} - { a = 1m; b = 2m } |> should equal { a= -1m; b = 22m }    
+    {a = -2m; b = 2m} - { a = 2m; b = 3m } |> should equal { a= -5m; b =0m }
+    8m - {a = -2m; b = 2m} - 3m |> should equal { a= 3m; b = 7m }
+
+[<Test>] 
+let power () = 
+    Interval.pow({a = 1m; b = 2m}, 2.) |> should equal { a= 1m; b = 4m }    
+
+[<Test>] 
+let zero () = 
+    Interval.Zero |> should equal { a= 0m; b = 0m }    
+
+[<Test>] 
+let distance () = 
+    Interval.distance ({a = 1m; b = 5m}, { a = 1m; b = 2m }) |> should equal 1.5m

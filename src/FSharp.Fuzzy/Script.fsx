@@ -6,11 +6,11 @@ open FSharp.Fuzzy
 open FSharp.Charting
 open FSharp.Fuzzy
 
-let i1 = Fuzzy.number(0.0011,0.0012,0.0014)
-let i2 = Fuzzy.number(0.0008,0.0011,0.0016)
-let M = 1000.
-let couponRate = 0.1
+let i1 = Fuzzy.number(0.0011m,0.0012m,0.0014m)
+let i2 = Fuzzy.number(0.0008m,0.0011m,0.0016m)
+let M = 1000m
+let couponRate = 0.1m
 
 let coupon = M * couponRate
-let presentValue = coupon/(1.+i1)+(coupon + M)/Fuzzy.pow(1.+i2, 2.)
-presentValue.Plot |> Chart.Line
+let presentValue = coupon/(1m+i1)+(coupon + M)/Fuzzy.pow(1m+i2, 2.)
+plot presentValue |> Chart.Line
