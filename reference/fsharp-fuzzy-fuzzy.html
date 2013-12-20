@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fuzzy - FSharp.Fuzzy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dmitry Sevastianov">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/FSharp.Fuzzy/content/style.css" />
+    <script type="text/javascript" src="/FSharp.Fuzzy/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">github page</a></li>
+        </ul>
+        <h3 class="muted"><a href="/FSharp.Fuzzy/index.html">FSharp.Fuzzy</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>Fuzzy</h1>
+<div class="xmldoc">
+</div>
+  <h3>Constructors</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Constructor</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            new Fuzzy
+          </code>
+          <div class="tip" id="7">
+            <strong>Signature:</strong>a:seq&lt;Interval&gt; -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            fuzzy.alphaCuts
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong>Interval []<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            fuzzy.Bottom
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong>Interval<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            fuzzy.Top
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong>Interval<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+            Fuzzy.( - )(x, y)
+          </code>
+          <div class="tip" id="29">
+            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+            Fuzzy.( - )(x, y)
+          </code>
+          <div class="tip" id="30">
+            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+            Fuzzy.( - )(x, y)
+          </code>
+          <div class="tip" id="31">
+            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+            Fuzzy.( * )(x, y)
+          </code>
+          <div class="tip" id="32">
+            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
+            Fuzzy.( * )(x, y)
+          </code>
+          <div class="tip" id="33">
+            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
+            Fuzzy.( * )(x, y)
+          </code>
+          <div class="tip" id="34">
+            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
+            Fuzzy.( / )(x, y)
+          </code>
+          <div class="tip" id="35">
+            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '36', 36)" onmouseover="showTip(event, '36', 36)">
+            Fuzzy.( / )(x, y)
+          </code>
+          <div class="tip" id="36">
+            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
+            Fuzzy.( / )(x, y)
+          </code>
+          <div class="tip" id="37">
+            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
+            Fuzzy.( + )(x, y)
+          </code>
+          <div class="tip" id="38">
+            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
+            Fuzzy.( + )(x, y)
+          </code>
+          <div class="tip" id="39">
+            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
+            Fuzzy.( + )(x, y)
+          </code>
+          <div class="tip" id="40">
+            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+            Fuzzy.map(f a)
+          </code>
+          <div class="tip" id="41">
+            <strong>Signature:</strong>(f:(Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+            Fuzzy.operation(f a b)
+          </code>
+          <div class="tip" id="42">
+            <strong>Signature:</strong>(f:(Interval -&gt; Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            Fuzzy.pow(x, p)
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong>(x:Fuzzy * p:double) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+            Fuzzy.Zero
+          </code>
+          <div class="tip" id="44">
+            <strong>Signature:</strong>Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc"></td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">FSharp.Fuzzy</li>
+            <li><a href="/FSharp.Fuzzy/index.html">Home page</a></li>
+            <li class="divider"></li>
+            <li><a href="http://nuget.com/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
+            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            
+            <li class="nav-header">Getting started</li>
+            <li><a href="/FSharp.Fuzzy/tutorial.html">Sample tutorial</a></li>
+
+            <li class="nav-header">Documentation</li>
+            <li><a href="/FSharp.Fuzzy/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/dsevastianov/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>
