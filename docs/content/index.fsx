@@ -1,6 +1,3 @@
-(*** hide ***)
-// This block of code is omitted in the generated HTML documentation. Use 
-// it to define helpers that you do not want to show in the documentation.
 #I "../../bin"
 
 (**
@@ -25,13 +22,20 @@ Documentation
 Example
 -------
 
-This example demonstrates using a function defined in this sample library.
+Fuzzy valuation of 2-yearbond with 10% coupon.
 
 *)
 #r "FSharp.Fuzzy.dll"
 open FSharp.Fuzzy
 
-printfn "hello = %i" <| Library.hello 0
+let i1 = Fuzzy.number(0.0011m,0.0012m,0.0014m)
+let i2 = Fuzzy.number(0.0008m,0.0011m,0.0016m)
+let M = 1000m
+let couponRate = 0.1m
+
+let coupon = M * couponRate
+let presentValue = coupon/(1m + i1) + (coupon + M)/Fuzzy.pow(1m+i2, 2.)
+
 
 (**
 Some more info
@@ -40,14 +44,10 @@ Samples & documentation
 -----------------------
 
 The library comes with comprehensible documentation. 
-It can include a tutorials automatically generated from `*.fsx` files in [the content folder][content]. 
-The API reference is automatically generated from Markdown comments in the library implementation.
 
- * [Tutorial](tutorial.html) contains a further explanation of this sample library.
+ * [Tutorial](tutorial.html).
 
- * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
-   and functions in the library. This includes additional brief samples on using most of the
-   functions.
+ * [API Reference](reference/index.html).
  
 Contributing and copyright
 --------------------------
@@ -61,9 +61,9 @@ The library is available under Public Domain license, which allows modification 
 redistribution for both commercial and non-commercial purposes. For more information see the 
 [License file][license] in the GitHub repository. 
 
-  [content]: https://github.com/pblasucci/FSharp.ProjectScaffold/tree/master/docs/content
-  [gh]: https://github.com/pblasucci/FSharp.ProjectScaffold
-  [issues]: https://github.com/pblasucci/FSharp.ProjectScaffold/issues
-  [readme]: https://github.com/pblasucci/FSharp.ProjectScaffold/blob/master/README.md
-  [license]: https://github.com/pblasucci/FSharp.ProjectScaffold/blob/master/LICENSE.txt
+  [content]: https://github.com/dsevastianov/FSharp.Fuzzy/tree/master/docs/content
+  [gh]: https://github.com/dsevastianov/FSharp.Fuzzy
+  [issues]: https://github.com/dsevastianov/FSharp.Fuzzy/issues
+  [readme]: https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/README.md
+  [license]: https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt
 *)

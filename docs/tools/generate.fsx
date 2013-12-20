@@ -6,15 +6,15 @@
 // Binaries that have XML documentation (in a corresponding generated XML file)
 let referenceBinaries = [ "FSharp.Fuzzy.dll" ]
 // Web site location for the generated documentation
-let website = "/FSharp.ProjectScaffold"
+let website = "/FSharp.Fuzzy"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "FSharp.ProjectScaffold"
-    "project-author", "Your Name"
-    "project-summary", "A short summary of your project"
-    "project-github", "http://github.com/pblasucci/FSharp.ProjectScaffold"
-    "project-nuget", "http://nuget.com/packages/FSharp.ProjectScaffold" ]
+  [ "project-name", "FSharp.Fuzzy"
+    "project-author", "Dmitry Sevastianov"
+    "project-summary", "Library of interval and fuzzy mathematics"
+    "project-github", "http://github.com/dsevastianov/FSharp.Fuzzy"
+    "project-nuget", "http://nuget.com/packages/FSharp.Fuzzy" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

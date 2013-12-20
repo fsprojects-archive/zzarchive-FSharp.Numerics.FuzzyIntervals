@@ -1,19 +1,13 @@
-(*** hide ***)
-// This block of code is omitted in the generated HTML documentation. Use 
-// it to define helpers that you do not want to show in the documentation.
 #I "../../bin"
 
 (**
-Introducing your project
+Tutorial
 ========================
 
-Say more
+TBD
 
 *)
 #r "FSharp.Fuzzy.dll"
 open FSharp.Fuzzy
 
-Library.hello 0
-(**
-Some more info
-*)
+let interval = { a= 100m; b = 200m }

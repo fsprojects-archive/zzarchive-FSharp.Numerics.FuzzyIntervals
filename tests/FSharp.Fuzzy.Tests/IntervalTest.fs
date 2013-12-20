@@ -14,7 +14,6 @@ let Middle () =
 [<Test>] 
 let Multiply () = 
     {a = 1m; b = 23m} * { a = 1m; b = 2m } |> should equal { a= 1m; b = 46m }
-    {a = -2m; b = 2m} * { a = 2m; b = 3m } |> printf "%A"
     {a = -2m; b = 2m} * { a = 2m; b = 3m } |> should equal { a= -6m; b = 6m }
     2m * {a = -2m; b = 2m} * 2m |> should equal { a= -8m; b = 8m }
 
