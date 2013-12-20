@@ -26,5 +26,5 @@ type Interval =
     static member (/) (x : decimal, y : Interval) = Interval.zeroLength(x) / y
     static member (+) (x : decimal, y : Interval) = Interval.zeroLength(x) + y
     static member (-) (x : decimal, y : Interval) = Interval.zeroLength(x) - y
-    static member pow (x : Interval, p : double) = { a =  Math.Pow(double x.a, p) |> decimal; b = Math.Pow(double x.b, p) |> decimal}
-    static member distance (x : Interval, y : Interval) = x.Middle - y.Middle
+    static member pow (x : Interval, p : double) = { a =  double x.a ** p |> decimal; b = double x.b ** p |> decimal }
+    static member distance (x : Interval, y : Interval) = Math.Abs(y.Middle - x.Middle)

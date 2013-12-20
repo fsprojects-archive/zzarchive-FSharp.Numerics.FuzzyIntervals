@@ -47,11 +47,15 @@ let testScew (uniform : Fuzzy) (scewed : Fuzzy) =
     uniform.alphaCuts.[5] |>  should not' (equal scewed.alphaCuts.[5])
 
 [<Test>] 
-let ``Fuzzy Multiplication scews the plot``() =
+let ``Fuzzy Multiplication and Division scew the plot``() =
     testScew (number(4m,10m,18m)) (number(1m,2m,3m) * number(4m,5m,6m))
     testScew (number(1m,1.5m,3m)) (3m / number(1m,2m,3m))
     testScew (number(0.25m,1m,4m)) (number(2m,4m,8m) / number(2m,4m,8m))
+    testScew (number(1m,4m,9m)) (Fuzzy.pow(number(1m,2m,3m), 2.))
 
-    
-    
-
+[<Test>] 
+let distnace() =
+    let uniform = number(1m,2m,3m)
+    distance (uniform, number(4m,5m,6m)) |> should equal 3m
+    let scewed = Fuzzy.pow(number(1m,2m,3m), 2.)
+    distance (scewed, number(1m,4m,9m)) |> should equal 0.15m

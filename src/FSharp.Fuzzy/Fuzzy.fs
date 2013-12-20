@@ -64,7 +64,7 @@ module Fuzzy =
             Seq.zip a.alphaCuts b.alphaCuts 
             |> Seq.mapi (fun i pair -> alpha i * Interval.distance pair ) 
             |> Seq.sum
-        Math.Max(0m, dividend/5.5m )
+        dividend/5.5m
     
     let plot (x : Fuzzy) = 
         seq { for i in 0..10 -> x.alphaCuts.[i].a, alpha i 

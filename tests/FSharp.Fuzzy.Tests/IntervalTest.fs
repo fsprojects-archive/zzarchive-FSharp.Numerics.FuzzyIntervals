@@ -48,3 +48,4 @@ let zero () =
 [<Test>] 
 let distance () = 
     Interval.distance ({a = 1m; b = 5m}, { a = 1m; b = 2m }) |> should equal 1.5m
+    Interval.distance ({ a = 1m; b = 2m }, {a = 1m; b = 5m}) |> should equal 1.5m
