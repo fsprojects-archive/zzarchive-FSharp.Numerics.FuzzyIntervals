@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>FSharp.Fuzzy</id>
+    <version>0.0.0-beta</version>
+    <authors>Dmitry Sevastianov</authors>
+    <owners>Dmitry Sevastianov</owners>
+    <licenseUrl>http://github.com/pblasucci/FSharp.ProjectScaffold/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://pblasucci.github.com/FSharp.ProjectScaffold</projectUrl>
+    <iconUrl>https://raw.github.com/fsharp/FSharp.ProjectScaffold/master/nuget/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Basic libary of fuzzy and interval calculus in F#.</summary>
+    <description> Basic libary of fuzzy and interval calculus in F#. Implements alpha-cut - based operations on fuzzy intervals and numbers.</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>fhsarp F# fuzzy interval</tags>
+    <dependencies />
+  </metadata>
+  <files>
+    <file src="FSharp.Fuzzy.dll" target="lib/net40" />
+  </files>
+</package>
