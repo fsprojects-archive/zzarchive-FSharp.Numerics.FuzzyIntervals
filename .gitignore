@@ -108,3 +108,7 @@ Backup*/
 UpgradeLog*.XML
 /docs/output
 /temp
+
+# Nuget outputs
+nuget/*.nupkg
+
