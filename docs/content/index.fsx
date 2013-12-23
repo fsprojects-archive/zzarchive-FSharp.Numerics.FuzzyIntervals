@@ -41,8 +41,6 @@ let presentValue = coupon/(1m + i1) + (coupon + M)/Fuzzy.pow(1m + i2, 2.)
 
 
 (**
-Some more info
-
 Samples & documentation
 -----------------------
 

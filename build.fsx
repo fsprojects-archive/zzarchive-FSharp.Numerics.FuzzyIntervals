@@ -30,8 +30,7 @@ let summary = "Basic libary of fuzzy and interval calculus in F#."
 // Longer description of the project
 // (used as a description for NuGet package; line breaks are automatically cleaned up)
 let description = """
-  Basic libary of fuzzy and interval calculus in F#.
-  Implements alpha-cut - based operations on fuzzy intervals and numbers."""
+  Implementation of interval calculus and alpha-cut - based operations on fuzzy intervals and numbers."""
 // List of author names (for NuGet package)
 let authors = [ "Dmitry Sevastianov" ]
 // Tags for your project (for NuGet package)
@@ -134,6 +133,7 @@ Target "NuGet" (fun _ ->
             OutputPath = "bin"
             AccessKey = getBuildParamOrDefault "nugetkey" ""
             Publish = hasBuildParam "nugetkey"
+            WorkingDir = "bin"
             Dependencies = [] })
         ("nuget/" + project + ".nuspec")
 )

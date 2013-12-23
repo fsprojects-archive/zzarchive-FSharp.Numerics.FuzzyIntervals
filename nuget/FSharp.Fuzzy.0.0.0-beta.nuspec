@@ -5,9 +5,9 @@
     <version>0.0.0-beta</version>
     <authors>Dmitry Sevastianov</authors>
     <owners>Dmitry Sevastianov</owners>
-    <licenseUrl>http://github.com/dsevastianov/Fuzzy/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://dsevastianov.github.io/Fuzzy</projectUrl>
-    <iconUrl>https://raw.github.com/fsharp/Fuzzy/master/nuget/logo.png</iconUrl>
+    <licenseUrl>http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://dsevastianov.github.io/FSharp.Fuzzy</projectUrl>
+    <iconUrl>https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/docs/files/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Basic libary of fuzzy and interval calculus in F#.</summary>
     <description> Basic libary of fuzzy and interval calculus in F#. Implements alpha-cut - based operations on fuzzy intervals and numbers.</description>
@@ -17,6 +17,6 @@
     <dependencies />
   </metadata>
   <files>
-    <file src="FSharp.Fuzzy.dll" target="lib/net40" />
+    <file src="..\bin\FSharp.Fuzzy.dll" target="lib/net40" />
   </files>
 </package>
