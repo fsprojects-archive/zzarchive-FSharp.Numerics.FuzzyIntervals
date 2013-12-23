@@ -14,3 +14,4 @@ let couponRate = 0.1m
 let coupon = M * couponRate
 let presentValue = coupon/(1m+i1)+(coupon + M)/Fuzzy.pow(1m+i2, 2.)
 plot presentValue |> Chart.Line
+

@@ -57,14 +57,25 @@ module Fuzzy =
     
     let number(a,b,c) = interval(a,b,b,c)
     
-    let point(a) = number(a,a,a)    
+    let point(a) = number(a,a,a)   
     
-    let distance (a: Fuzzy, b: Fuzzy) = 
-        let dividend = 
+    let binary f (a: Fuzzy) (b: Fuzzy) = 
+        let result = 
             Seq.zip a.alphaCuts b.alphaCuts 
-            |> Seq.mapi (fun i pair -> alpha i * Interval.distance pair ) 
+            |> Seq.mapi (fun i pair -> alpha i * f pair ) 
             |> Seq.sum
-        dividend/5.5m
+        result/5.5m 
+
+    let unary f (a: Fuzzy) = 
+        let result = 
+            a.alphaCuts 
+            |> Seq.mapi (fun i a -> alpha i * f a ) 
+            |> Seq.sum
+        result/5.5m 
+    
+    let distance a b = binary Interval.distance a b
+    let width a = unary (fun i->i.b - i.a) a
+    let risk a = unary (fun i->2m * (i.b - i.a)/(i.a+i.b)) a
     
     let plot (x : Fuzzy) = 
         seq { for i in 0..10 -> x.alphaCuts.[i].a, alpha i 

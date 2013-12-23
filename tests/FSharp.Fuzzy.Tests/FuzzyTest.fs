@@ -56,6 +56,6 @@ let ``Fuzzy Multiplication and Division scew the plot``() =
 [<Test>] 
 let distnace() =
     let uniform = number(1m,2m,3m)
-    distance (uniform, number(4m,5m,6m)) |> should equal 3m
+    distance uniform (number(4m,5m,6m)) |> should equal 3m
     let scewed = Fuzzy.pow(number(1m,2m,3m), 2.)
-    distance (scewed, number(1m,4m,9m)) |> should equal 0.15m
+    distance scewed (number(1m,4m,9m)) |> should equal 0.15m
