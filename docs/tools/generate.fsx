@@ -14,7 +14,7 @@ let info =
     "project-author", "Dmitry Sevastianov"
     "project-summary", "Library of interval and fuzzy mathematics"
     "project-github", "http://github.com/dsevastianov/FSharp.Fuzzy"
-    "project-nuget", "http://nuget.com/packages/FSharp.Fuzzy" ]
+    "project-nuget", "http://nuget.org/packages/FSharp.Fuzzy" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below
