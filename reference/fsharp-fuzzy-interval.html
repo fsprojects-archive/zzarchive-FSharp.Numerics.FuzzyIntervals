@@ -37,6 +37,12 @@
 
 <h1>Interval</h1>
 <div class="xmldoc">
+<p>Interval record</p>
+
+<pre><code> let i = {a = 1m; b = 2m }
+</code></pre>
+
+<p><code>a</code> is expected to be less or equal <code>b</code></p>
 </div>
   <h3>Record Fields</h3>
   <table class="table table-bordered member-list">
@@ -55,7 +61,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Lower bound</p>
+
         </td>
       </tr>
       <tr>
@@ -69,7 +76,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Upper bound</p>
+
         </td>
       </tr>
     </tbody>
@@ -91,7 +99,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Middle point between <code>a</code> and <code>b</code></p>
+
         </td>
       </tr>
     </tbody>
@@ -113,7 +122,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Subtract decimal <code>y</code> from interval <code>x</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -127,7 +137,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Subtract decimal <code>y</code> from interval <code>x</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -141,7 +152,9 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Subtract <code>y</code> from <code>x</code>, implemetation is simplified for performance reasons as it is easy to proof that for any intervals
+<code>a'=x.a-y.b</code> and <code>b'=x.b-y.a</code> gives widest possible resulting interval <code>a',b'</code></p>
+
         </td>
       </tr>
       <tr>
@@ -155,7 +168,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Multiply interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -169,7 +183,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Multiply interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -183,7 +198,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Multiply <code>x</code> by <code>y</code>, uses <code>operation</code></p>
+
         </td>
       </tr>
       <tr>
@@ -197,7 +213,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Divide interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -211,7 +228,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Divide interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -225,7 +243,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Divide <code>x</code> by <code>y</code>, uses <code>operation</code>, 'y` cannot contain zero</p>
+
         </td>
       </tr>
       <tr>
@@ -239,7 +258,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Add interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -253,7 +273,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Add interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -267,7 +288,9 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Add <code>x</code> to <code>y</code>, implemetation is simplified for performance reasons as it is easy to proof that for any intervals
+<code>a'=x.a+y.a</code> and <code>b'=x.b+y.b</code> gives widest possible resulting interval <code>a',b'</code></p>
+
         </td>
       </tr>
       <tr>
@@ -281,7 +304,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Distance between <code>x</code> by <code>y</code> calculated as distance between their middle points</p>
+
         </td>
       </tr>
       <tr>
@@ -295,7 +319,9 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Generic binary operation over two intervals compliant with pivotal rule of interval mathematics - 
+operation should result in widest possible interval</p>
+
         </td>
       </tr>
       <tr>
@@ -309,7 +335,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Rises <code>x</code> to the power of <code>p</code></p>
+
         </td>
       </tr>
       <tr>
@@ -323,7 +350,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Interval with <code>a</code> and `b equal zero</p>
+
         </td>
       </tr>
       <tr>
@@ -337,7 +365,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Creates interval of zero length</p>
+
         </td>
       </tr>
     </tbody>

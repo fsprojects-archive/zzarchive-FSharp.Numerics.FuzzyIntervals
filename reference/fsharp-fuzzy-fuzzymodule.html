@@ -37,6 +37,7 @@
 
 <h1>Fuzzy</h1>
 <div class="xmldoc">
+<p>This module contains bunch of factory methods for Fuzzy type</p>
 </div>
 
 <!-- Render nested types and modules, if there are any -->
@@ -50,15 +51,18 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+          <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
             binary f a b
           </code>
-          <div class="tip" id="2">
+          <div class="tip" id="1">
             <strong>Signature:</strong>f:(Interval * Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Binary function for defuzzification of the result of operation <code>f</code> applied to each pair of corresponding $alpha;-cuts taken 
+from <code>a</code> and <code>b</code> weighted by value of &amp;mu;.
+For example, useful for calcualtion of the <code>distance</code> between two fuzzy sets</p>
+
         </td>
       </tr>
       <tr>
@@ -72,7 +76,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Calculates distance between two fuzzy sets <code>a</code> and <code>b</code></p>
+
         </td>
       </tr>
       <tr>
@@ -86,7 +91,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Creates trapezoid fuzzy set with bottom &amp;alpha;-cut <code>{a,d}</code> and top &amp;alpha;-cut <code>{b,c}</code></p>
+
         </td>
       </tr>
       <tr>
@@ -100,21 +106,23 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Creates triangular fuzzy set with bottom &amp;alpha;-cut <code>{a,c}</code> and zero-length top &amp;alpha;-cut <code>b</code></p>
+
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
-            plot x
+            plot a
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong>x:Fuzzy -&gt; (decimal * decimal) []<br />
+            <strong>Signature:</strong>a:Fuzzy -&gt; (decimal * decimal) []<br />
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Represents fuzzy set <code>a</code> for drawing a chart</p>
+
         </td>
       </tr>
       <tr>
@@ -128,7 +136,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Creates fuzzy representation of zero-length interval</p>
+
         </td>
       </tr>
       <tr>
@@ -142,7 +151,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Calculates weighted risk of fuzzy set <code>a</code>, i.e. the ratio between its width and the middle on each &amp;alpha;-cut</p>
+
         </td>
       </tr>
       <tr>
@@ -156,7 +166,9 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Unary function for defuzzification of the result of operation <code>f</code> 
+applied to each $alpha;-cut of <code>a</code> weighted by corresponding value of &amp;mu;.</p>
+
         </td>
       </tr>
       <tr>
@@ -170,7 +182,8 @@
                       </div>
         </td>
         <td class="xmldoc">
-        
+        <p>Calculates weighted width of fuzzy set <code>a</code></p>
+
         </td>
       </tr>
     </tbody>
