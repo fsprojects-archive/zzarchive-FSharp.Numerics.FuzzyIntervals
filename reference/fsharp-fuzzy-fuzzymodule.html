@@ -51,10 +51,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
-            distance (a, b)
+            binary f a b
           </code>
           <div class="tip" id="2">
-            <strong>Signature:</strong>(a:Fuzzy * b:Fuzzy) -&gt; decimal<br />
+            <strong>Signature:</strong>f:(Interval * Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -65,10 +65,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
-            interval (a, b, c, d)
+            distance a b
           </code>
           <div class="tip" id="3">
-            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong>a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -79,10 +79,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
-            number (a, b, c)
+            interval (a, b, c, d)
           </code>
           <div class="tip" id="4">
-            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -93,10 +93,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
-            plot x
+            number (a, b, c)
           </code>
           <div class="tip" id="5">
-            <strong>Signature:</strong>x:Fuzzy -&gt; (decimal * decimal) []<br />
+            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -107,10 +107,66 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
-            point a
+            plot x
           </code>
           <div class="tip" id="6">
+            <strong>Signature:</strong>x:Fuzzy -&gt; (decimal * decimal) []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
+            point a
+          </code>
+          <div class="tip" id="7">
             <strong>Signature:</strong>a:decimal -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            risk a
+          </code>
+          <div class="tip" id="8">
+            <strong>Signature:</strong>a:Fuzzy -&gt; decimal<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            unary f a
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong>f:(Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; decimal<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            width a
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong>a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -126,7 +182,7 @@
             <li class="nav-header">FSharp.Fuzzy</li>
             <li><a href="/FSharp.Fuzzy/index.html">Home page</a></li>
             <li class="divider"></li>
-            <li><a href="http://nuget.com/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
+            <li><a href="http://nuget.org/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
             <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">Source Code on GitHub</a></li>
             <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
             <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
