@@ -44,11 +44,11 @@ let presentValue = coupon/(1m + i1) + (coupon + M)/Fuzzy.pow(1m + i2, 2.)
 Samples & documentation
 -----------------------
 
-The library comes with comprehensible documentation. 
+The library comes with documentation. 
 
- * [Tutorial](tutorial.html).
+ * [Tutorial](tutorial.html)
 
- * [API Reference](reference/index.html).
+ * [API Reference](reference/index.html)
  
 Contributing and copyright
 --------------------------

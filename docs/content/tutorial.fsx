@@ -5,8 +5,7 @@
 Tutorial
 ========================
 
-TBD
-
+TBD 
 *)
 #r "FSharp.Fuzzy.dll"
 open FSharp.Fuzzy
