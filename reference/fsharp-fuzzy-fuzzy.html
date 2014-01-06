@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
     <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="/FSharp.Fuzzy/content/style.css" />
@@ -38,8 +39,8 @@
 <h1>Fuzzy</h1>
 <div class="xmldoc">
 <p>Fuzzy type
-This type implements subset of fuzzy intervals described by convex membership function &amp;mu; with values changing from 0 to 1. 
-Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</code> level up to the <code>Top</code>.</p>
+This type implements subset of fuzzy intervals described by convex membership function <span class="math">\(\mu\)</span> with values changing from 0 to 1. 
+Expects exactly 11 intervals comprising <span class="math">\(\alpha\)</span>-cuts, from <code>Bottom</code> level up to the <code>Top</code>.</p>
 </div>
   <h3>Constructors</h3>
   <table class="table table-bordered member-list">
@@ -80,7 +81,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Exposes raw list of &amp;alpha;-cuts</p>
+        <p>Exposes raw list of <span class="math">\(\alpha\)</span>-cuts</p>
 
         </td>
       </tr>
@@ -95,7 +96,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>&amp;alpha;-cut with &amp;mu; = 0</p>
+        <p><span class="math">\(\alpha\)</span>-cut with <span class="math">\(\mu\)</span> = 0</p>
 
         </td>
       </tr>
@@ -110,7 +111,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>&amp;alpha;-cut with &amp;mu; = 1</p>
+        <p><span class="math">\(\alpha\)</span>-cut with <span class="math">\(\mu\)</span> = 1</p>
 
         </td>
       </tr>
@@ -313,7 +314,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Generic unary operation overa set implemented as an application of <code>f</code> on each &amp;alpha;-cut</p>
+        <p>Generic unary operation overa set implemented as an application of <code>f</code> on each <span class="math">\(\alpha\)</span>-cut</p>
 
         </td>
       </tr>
@@ -328,7 +329,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Generic binary operation over two fuzzy sets implemented as a sum of operations over each &amp;alpha;-cut</p>
+        <p>Generic binary operation over two fuzzy sets implemented as a sum of operations over each <span class="math">\(\alpha\)</span>-cut</p>
 
         </td>
       </tr>
@@ -358,7 +359,7 @@ Expects exactly 11 intervals comprising &amp;alpha;-cuts, from <code>Bottom</cod
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Fuzzy set comprized from zero &amp;alpha;-cuts</p>
+        <p>Fuzzy set comprized from zero <span class="math">\(\alpha\)</span>-cuts</p>
 
         </td>
       </tr>
