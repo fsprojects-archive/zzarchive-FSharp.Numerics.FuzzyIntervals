@@ -5,14 +5,9 @@ open NUnit.Framework
 open FsUnit
 
 [<Test>] 
-let ``11 alpha-cuts expected``() =
-    (fun () -> Fuzzy(seq {yield Interval.Zero}) |> ignore ) |> should throw typeof<System.Exception>
-
-[<Test>] 
 let ``alpha-cuts``() =
     let number = number(10m,20m,30m)
     let sut = number.alphaCuts
-    sut |> should haveLength 11
     sut.[0] |> should equal number.Bottom
     sut.[10] |> should equal number.Top
 

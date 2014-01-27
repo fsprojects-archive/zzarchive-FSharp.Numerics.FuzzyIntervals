@@ -2,25 +2,19 @@
 
 open System
 
-///Module for fuzzy-specific simple math functions
-[<AutoOpen>]
-module FuzzyUtils =
-    /// Converts number of the level in $\alpha$-cut array to the value of membership function $\mu$
-    let alpha level = 0.1m * decimal level
-
 /// Fuzzy type
 /// This type implements subset of fuzzy intervals described by convex membership function $\mu$ with values changing from 0 to 1. 
-/// Expects exactly 11 intervals comprising $\alpha$-cuts, from `Bottom` level up to the `Top`.    
+/// Accepts array of intervals comprising $\alpha$-cuts, starting from `Bottom` level up to the `Top`.    
 [<StructuredFormatDisplayAttribute("{alphaCuts}")>]
 type Fuzzy(a : Interval seq) = 
     let alphas = a |> Array.ofSeq
-    do if alphas.Length <> 11 then failwith "Exactly 11 alpha-cuts expected."
+
     ///Exposes raw list of $\alpha$-cuts
     member this.alphaCuts with get() = alphas |> Array.ofSeq
     ///$\alpha$-cut with $\mu$ = 0 
     member this.Bottom with get() = alphas.[0]
     ///$\alpha$-cut with $\mu$ = 1 
-    member this.Top with get() = alphas.[10]
+    member this.Top with get() = alphas.[alphas.Length - 1]
     
     override this.ToString() = sprintf "%A" alphas
 
@@ -37,7 +31,7 @@ type Fuzzy(a : Interval seq) =
           | :? Fuzzy as y -> compare x.alphaCuts y.alphaCuts
           | _ -> invalidArg "yobj" "cannot compare values of different types"
 
-    ///Fuzzy set comprized from zero $\alpha$-cuts 
+    ///Fuzzy set comprized from 11 zero $\alpha$-cuts 
     static member Zero =  Fuzzy(Array.create 11 Interval.Zero)
     
     ///Generic binary operation over two fuzzy sets implemented as a sum of operations over each $\alpha$-cut
@@ -76,11 +70,18 @@ type Fuzzy(a : Interval seq) =
 [<CompilationRepresentation(CompilationRepresentationFlags.ModuleSuffix)>]
 [<AutoOpen>]
 module Fuzzy =
+    /// Converts number of the level in $\alpha$-cut array to the value of membership function $\mu$
+    let alpha total level = if level = 0 then 0m else 1.m / decimal (total - 1) * decimal level
+
     ///Creates trapezoid fuzzy set with bottom $\alpha$-cut `{a,d}` and top $\alpha$-cut `{b,c}`         
-    let interval(a,b,c,d) = 
+    let trapezoid levels (a,b,c,d) = 
+        let maxIndex = levels - 1
         if a>b || b>c || c>d then failwith "expected a>=b>=c>=d"
-        Fuzzy(seq { for i in 0..10 -> { a = a+(b-a)*0.1m*decimal i; b = c+(d-c)*0.1m*decimal (10-i) } } )    
-    
+        Fuzzy(seq { for i in 0..maxIndex -> { a = a+(b-a)*0.1m*decimal i; b = c+(d-c)*0.1m*decimal (maxIndex-i) } } )    
+   
+    ///Creates trapezoid with 11 $\alpha$-cuts which gives increment of 0.1 in $\mu$ from one $\alpha$-cut to the next
+    let interval(a,b,c,d) = trapezoid 11 (a,b,c,d)
+         
     ///Creates triangular fuzzy set with bottom $\alpha$-cut `{a,c}` and zero-length top $\alpha$-cut `b`         
     let number(a,b,c) = interval(a,b,b,c)
     
@@ -91,10 +92,12 @@ module Fuzzy =
     ///from `a` and `b` weighted by value of $\mu$.
     ///For example, useful for calcualtion of the `distance` between two fuzzy sets:
     ///${\Delta }_{\bar{A}-\bar{B}} = \frac{\sum_{\alpha}\alpha \Delta_{A_\alpha-B_\alpha}}{\sum_{\alpha}\alpha}$
+    ///*Important!* Only works for fuzzy sets with the same number of $\alpha$-cuts
     let binary f (a: Fuzzy) (b: Fuzzy) = 
+        assert (a.alphaCuts.Length = b.alphaCuts.Length)
         let result = 
             Seq.zip a.alphaCuts b.alphaCuts 
-            |> Seq.mapi (fun i pair -> alpha i * f pair ) 
+            |> Seq.mapi (fun i pair -> alpha a.alphaCuts.Length i * f pair ) 
             |> Seq.sum
         result/5.5m 
 
@@ -104,7 +107,7 @@ module Fuzzy =
     let unary f (a: Fuzzy) = 
         let result = 
             a.alphaCuts 
-            |> Seq.mapi (fun i a -> alpha i * f a ) 
+            |> Seq.mapi (fun i b -> alpha a.alphaCuts.Length i * f b ) 
             |> Seq.sum
         result/5.5m 
     
@@ -116,6 +119,7 @@ module Fuzzy =
     let risk a = unary (fun i->2m * (i.b - i.a)/(i.a+i.b)) a
     ///Represents fuzzy set `a` for drawing a chart  
     let plot (a : Fuzzy) = 
-        seq { for i in 0..10 -> a.alphaCuts.[i].a, alpha i 
-              for i in 10..-1..0 -> a.alphaCuts.[i].b, alpha i  } |> Array.ofSeq
+        let length =  a.alphaCuts.Length - 1
+        seq { for i in 0..length -> a.alphaCuts.[i].a, alpha a.alphaCuts.Length i 
+              for i in length .. -1 .. 0 -> a.alphaCuts.[i].b, alpha a.alphaCuts.Length i  } |> Array.ofSeq
 
