@@ -75,9 +75,10 @@ module Fuzzy =
 
     ///Creates trapezoid fuzzy set with bottom $\alpha$-cut `{a,d}` and top $\alpha$-cut `{b,c}`         
     let trapezoid levels (a,b,c,d) = 
-        let maxIndex = levels - 1
         if a>b || b>c || c>d then failwith "expected a>=b>=c>=d"
-        Fuzzy(seq { for i in 0..maxIndex -> { a = a+(b-a)*0.1m*decimal i; b = c+(d-c)*0.1m*decimal (maxIndex-i) } } )    
+        let maxIndex = levels - 1
+        let step = 1.m / (decimal maxIndex)
+        Fuzzy(seq { for i in 0..maxIndex -> { a = a+(b-a)*step*decimal i; b = c+(d-c)*step*decimal (maxIndex-i) } } )    
    
     ///Creates trapezoid with 11 $\alpha$-cuts which gives increment of 0.1 in $\mu$ from one $\alpha$-cut to the next
     let interval(a,b,c,d) = trapezoid 11 (a,b,c,d)
@@ -92,31 +93,38 @@ module Fuzzy =
     ///from `a` and `b` weighted by value of $\mu$.
     ///For example, useful for calcualtion of the `distance` between two fuzzy sets:
     ///${\Delta }_{\bar{A}-\bar{B}} = \frac{\sum_{\alpha}\alpha \Delta_{A_\alpha-B_\alpha}}{\sum_{\alpha}\alpha}$
-    ///*Important!* Only works for fuzzy sets with the same number of $\alpha$-cuts
+    ///Note that $\sum_{\alpha}\alpha = \frac{n}{2}$ where $n$ - number of $\alpha$-cuts
+    ///
+    ///*Important!* `a` and `b` should have same number of $\alpha$-cuts
     let binary f (a: Fuzzy) (b: Fuzzy) = 
         assert (a.alphaCuts.Length = b.alphaCuts.Length)
+        let length = a.alphaCuts.Length
         let result = 
             Seq.zip a.alphaCuts b.alphaCuts 
             |> Seq.mapi (fun i pair -> alpha a.alphaCuts.Length i * f pair ) 
             |> Seq.sum
-        result/5.5m 
+        result / (decimal a.alphaCuts.Length / 2m)
 
     ///Unary function for defuzzification of the result of operation `f` 
     ///applied to each $\alpha$-cut of `a` weighted by corresponding value of $\mu$. 
     ///$ W f = \frac{\sum_{\alpha}\alpha f}{\sum_{\alpha}\alpha}$
+    ///Note that $\sum_{\alpha}\alpha = \frac{n}{2}$ where $n$ - number of $\alpha$-cuts
     let unary f (a: Fuzzy) = 
         let result = 
             a.alphaCuts 
             |> Seq.mapi (fun i b -> alpha a.alphaCuts.Length i * f b ) 
             |> Seq.sum
-        result/5.5m 
+        result / (decimal a.alphaCuts.Length / 2m)
     
     ///Calculates distance between two fuzzy sets `a` and `b`
     let distance a b = binary Interval.distance a b
+    
     ///Calculates weighted width of fuzzy set `a`
     let width a = unary (fun i->i.b - i.a) a
+    
     ///Calculates weighted risk of fuzzy set `a`, i.e. the ratio between its width and the middle on each $\alpha$-cut
     let risk a = unary (fun i->2m * (i.b - i.a)/(i.a+i.b)) a
+    
     ///Represents fuzzy set `a` for drawing a chart  
     let plot (a : Fuzzy) = 
         let length =  a.alphaCuts.Length - 1

@@ -12,6 +12,14 @@ let ``alpha-cuts``() =
     sut.[10] |> should equal number.Top
 
 [<Test>] 
+let factory() =
+    let number = trapezoid 5 (1m,2m,2m,3m)
+    let sut = number.alphaCuts
+    sut.[0] |> should equal { a = 1m; b=3m }
+    sut.[2] |> should equal { a = 1.5m; b=2.5m }
+    sut.[4] |> should equal { a = 2m; b=2m }
+
+[<Test>] 
 let Plot() =
     let number = number(10m,20m,30m)
     let sut = plot number
@@ -36,10 +44,18 @@ let operations() =
     1m - num |> should equal (number(-2m,-1m,0m))
     num - 1m |> should equal (number(0m,1m,2m))
 
+[<Test>] 
+let ``operations for non-standard number of alhpa-cuts``() =
+    let fiveLevels (a,b,c) = trapezoid 5 (a,b,b,c)
+    let num = fiveLevels (1m,2m,3m)
+    num + num |> should equal (fiveLevels(2m,4m,6m))
+    num * 10m |> should equal (fiveLevels(10m,20m,30m))
+    
 let testScew (uniform : Fuzzy) (scewed : Fuzzy) = 
     uniform.Top |> should equal scewed.Top
     uniform.Bottom |> should equal scewed.Bottom
-    uniform.alphaCuts.[5] |>  should not' (equal scewed.alphaCuts.[5])
+    let middle = uniform.alphaCuts.Length / 2
+    uniform.alphaCuts.[middle] |>  should not' (equal scewed.alphaCuts.[middle])
 
 [<Test>] 
 let ``Fuzzy Multiplication and Division scew the plot``() =
@@ -54,3 +70,11 @@ let distnace() =
     distance uniform (number(4m,5m,6m)) |> should equal 3m
     let scewed = Fuzzy.pow(number(1m,2m,3m), 2.)
     distance scewed (number(1m,4m,9m)) |> should equal 0.15m
+
+[<Test>] 
+let width() =
+    let num = 1m,2m,2m,3m
+    width (trapezoid 11 num) |> should equal 0.6m
+    width (trapezoid 2 num) |> should equal 0m
+    width (trapezoid 5 num) |> should equal 0.5m
+    
