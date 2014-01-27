@@ -79,7 +79,9 @@
 from <code>a</code> and <code>b</code> weighted by value of <span class="math">\(\mu\)</span>.
 For example, useful for calcualtion of the <code>distance</code> between two fuzzy sets:
 <span class="math">\({\Delta }_{\bar{A}-\bar{B}} = \frac{\sum_{\alpha}\alpha \Delta_{A_\alpha-B_\alpha}}{\sum_{\alpha}\alpha}\)</span>
-<em>Important!</em> Only works for fuzzy sets with the same number of <span class="math">\(\alpha\)</span>-cuts</p>
+Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where <span class="math">\(n\)</span> - number of <span class="math">\(\alpha\)</span>-cuts</p>
+
+<p><em>Important!</em> <code>a</code> and <code>b</code> should have same number of <span class="math">\(\alpha\)</span>-cuts</p>
 
         </td>
       </tr>
@@ -201,7 +203,8 @@ For example, useful for calcualtion of the <code>distance</code> between two fuz
         <td class="xmldoc">
         <p>Unary function for defuzzification of the result of operation <code>f</code> 
 applied to each <span class="math">\(\alpha\)</span>-cut of <code>a</code> weighted by corresponding value of <span class="math">\(\mu\)</span>. 
-<span class="math">\(W f = \frac{\sum_{\alpha}\alpha f}{\sum_{\alpha}\alpha}\)</span></p>
+<span class="math">\(W f = \frac{\sum_{\alpha}\alpha f}{\sum_{\alpha}\alpha}\)</span>
+Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where <span class="math">\(n\)</span> - number of <span class="math">\(\alpha\)</span>-cuts</p>
 
         </td>
       </tr>
