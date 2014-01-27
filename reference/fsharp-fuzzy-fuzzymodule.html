@@ -53,9 +53,24 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
-            binary f a b
+            alpha total level
           </code>
           <div class="tip" id="1">
+            <strong>Signature:</strong>total:int -&gt; level:int -&gt; decimal&lt;1&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Converts number of the level in <span class="math">\(\alpha\)</span>-cut array to the value of membership function <span class="math">\(\mu\)</span></p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+            binary f a b
+          </code>
+          <div class="tip" id="2">
             <strong>Signature:</strong>f:(Interval * Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
@@ -63,7 +78,8 @@
         <p>Binary function for defuzzification of the result of operation <code>f</code> applied to each pair of corresponding <span class="math">\(\alpha\)</span>-cuts taken 
 from <code>a</code> and <code>b</code> weighted by value of <span class="math">\(\mu\)</span>.
 For example, useful for calcualtion of the <code>distance</code> between two fuzzy sets:
-<span class="math">\({\Delta }_{\bar{A}-\bar{B}} = \frac{\sum_{\alpha}\alpha \Delta_{A_\alpha-B_\alpha}}{\sum_{\alpha}\alpha}\)</span></p>
+<span class="math">\({\Delta }_{\bar{A}-\bar{B}} = \frac{\sum_{\alpha}\alpha \Delta_{A_\alpha-B_\alpha}}{\sum_{\alpha}\alpha}\)</span>
+<em>Important!</em> Only works for fuzzy sets with the same number of <span class="math">\(\alpha\)</span>-cuts</p>
 
         </td>
       </tr>
@@ -93,7 +109,7 @@ For example, useful for calcualtion of the <code>distance</code> between two fuz
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Creates trapezoid fuzzy set with bottom <span class="math">\(\alpha\)</span>-cut <code>{a,d}</code> and top <span class="math">\(\alpha\)</span>-cut <code>{b,c}</code></p>
+        <p>Creates trapezoid with 11 <span class="math">\(\alpha\)</span>-cuts which gives increment of 0.1 in <span class="math">\(\mu\)</span> from one <span class="math">\(\alpha\)</span>-cut to the next</p>
 
         </td>
       </tr>
@@ -119,7 +135,7 @@ For example, useful for calcualtion of the <code>distance</code> between two fuz
             plot a
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong>a:Fuzzy -&gt; (decimal * decimal) []<br />
+            <strong>Signature:</strong>a:Fuzzy -&gt; (decimal * decimal&lt;1&gt;) []<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -161,9 +177,24 @@ For example, useful for calcualtion of the <code>distance</code> between two fuz
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
-            unary f a
+            trapezoid levels (a, b, c, d)
           </code>
           <div class="tip" id="9">
+            <strong>Signature:</strong>levels:int -&gt; (a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Creates trapezoid fuzzy set with bottom <span class="math">\(\alpha\)</span>-cut <code>{a,d}</code> and top <span class="math">\(\alpha\)</span>-cut <code>{b,c}</code></p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            unary f a
+          </code>
+          <div class="tip" id="10">
             <strong>Signature:</strong>f:(Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
@@ -177,10 +208,10 @@ applied to each <span class="math">\(\alpha\)</span>-cut of <code>a</code> weigh
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
             width a
           </code>
-          <div class="tip" id="10">
+          <div class="tip" id="11">
             <strong>Signature:</strong>a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
