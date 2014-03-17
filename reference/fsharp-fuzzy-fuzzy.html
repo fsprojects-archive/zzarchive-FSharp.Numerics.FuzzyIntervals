@@ -25,7 +25,7 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li><a href="http://fsharp.org">fsharp.org</a></li>
-          <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">github page</a></li>
+          <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">github page</a></li>
         </ul>
         <h3 class="muted"><a href="/FSharp.Fuzzy/index.html">FSharp.Fuzzy</a></h3>
       </div>
@@ -55,11 +55,12 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             new(a)
           </code>
           <div class="tip" id="14">
-            <strong>Signature:</strong>a:seq&lt;Interval&gt; -&gt; Fuzzy<br />
+            <strong>Signature:</strong> a:seq&lt;Interval&gt; -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L9-9" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -77,12 +78,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             alphaCuts
           </code>
           <div class="tip" id="15">
-            <strong>Signature:</strong>Interval []<br />
+            <strong>Signature:</strong> Interval []<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Exposes raw list of <span class="math">\(\alpha\)</span>-cuts</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L13-13" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -92,12 +94,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             Bottom
           </code>
           <div class="tip" id="16">
-            <strong>Signature:</strong>Interval<br />
+            <strong>Signature:</strong> Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p><span class="math">\(\alpha\)</span>-cut with <span class="math">\(\mu\)</span> = 0</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L15-15" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -107,12 +110,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             Top
           </code>
           <div class="tip" id="17">
-            <strong>Signature:</strong>Interval<br />
+            <strong>Signature:</strong> Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p><span class="math">\(\alpha\)</span>-cut with <span class="math">\(\mu\)</span> = 1</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L17-17" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -130,12 +134,29 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( - )(x, y)
           </code>
           <div class="tip" id="19">
-            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Subtract <code>y</code> from <code>x</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L65-65" class="github-link">Go to GitHub source</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+            ( - )(x, y)
+          </code>
+          <div class="tip" id="20">
+            <strong>Signature:</strong> (x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        <p>Subtract <code>y</code> from <code>x</code>, uses <code>map</code></p>
+
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L57-57" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -145,27 +166,29 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( - )(x, y)
           </code>
           <div class="tip" id="21">
-            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Subtract <code>y</code> from <code>x</code>, uses <code>map</code></p>
+        <p>Subtract <code>y</code> from <code>x</code>, uses <code>operation</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L49-49" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
-            ( - )(x, y)
+            ( * )(x, y)
           </code>
           <div class="tip" id="22">
-            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Subtract <code>y</code> from <code>x</code>, uses <code>operation</code></p>
+        <p>Multiply <code>x</code> by <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L59-59" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -175,12 +198,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( * )(x, y)
           </code>
           <div class="tip" id="23">
-            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Multiply <code>x</code> by <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L51-51" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -190,27 +214,29 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( * )(x, y)
           </code>
           <div class="tip" id="24">
-            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Multiply <code>x</code> by <code>y</code>, uses <code>map</code></p>
+        <p>Multiply <code>x</code> by <code>y</code>, uses <code>operation</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L43-43" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
-            ( * )(x, y)
+            ( / )(x, y)
           </code>
           <div class="tip" id="25">
-            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Multiply <code>x</code> by <code>y</code>, uses <code>operation</code></p>
+        <p>Divide <code>x</code> by <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L61-61" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -220,12 +246,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( / )(x, y)
           </code>
           <div class="tip" id="26">
-            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Divide <code>x</code> by <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L53-53" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -235,27 +262,29 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( / )(x, y)
           </code>
           <div class="tip" id="27">
-            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Divide <code>x</code> by <code>y</code>, uses <code>map</code></p>
+        <p>Divide <code>x</code> by <code>y</code>, uses <code>operation</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L45-45" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
-            ( / )(x, y)
+            ( + )(x, y)
           </code>
           <div class="tip" id="28">
-            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Divide <code>x</code> by <code>y</code>, uses <code>operation</code></p>
+        <p>Add <code>x</code> to <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L63-63" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -265,12 +294,13 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( + )(x, y)
           </code>
           <div class="tip" id="29">
-            <strong>Signature:</strong>(x:decimal * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Add <code>x</code> to <code>y</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L55-55" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -280,87 +310,77 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             ( + )(x, y)
           </code>
           <div class="tip" id="30">
-            <strong>Signature:</strong>(x:Fuzzy * y:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Add <code>x</code> to <code>y</code>, uses <code>map</code></p>
+        <p>Add <code>x</code> to <code>y</code>, uses <code>operation</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L47-47" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
-            ( + )(x, y)
+            map(f a)
           </code>
           <div class="tip" id="31">
-            <strong>Signature:</strong>(x:Fuzzy * y:Fuzzy) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (f:(Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Add <code>x</code> to <code>y</code>, uses <code>operation</code></p>
+        <p>Generic unary operation overa set implemented as an application of <code>f</code> on each <span class="math">\(\alpha\)</span>-cut</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L40-40" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
-            map(f a)
+            operation(f a b)
           </code>
           <div class="tip" id="32">
-            <strong>Signature:</strong>(f:(Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (f:(Interval -&gt; Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Generic unary operation overa set implemented as an application of <code>f</code> on each <span class="math">\(\alpha\)</span>-cut</p>
+        <p>Generic binary operation over two fuzzy sets implemented as a sum of operations over each <span class="math">\(\alpha\)</span>-cut</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L38-38" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
-            operation(f a b)
+            pow(x, p)
           </code>
           <div class="tip" id="33">
-            <strong>Signature:</strong>(f:(Interval -&gt; Interval -&gt; Interval)) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (x:Fuzzy * p:double) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
-        <p>Generic binary operation over two fuzzy sets implemented as a sum of operations over each <span class="math">\(\alpha\)</span>-cut</p>
+        <p>Rises <code>x</code> to the power of <code>p</code>, uses <code>map</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L67-67" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
-            pow(x, p)
-          </code>
-          <div class="tip" id="34">
-            <strong>Signature:</strong>(x:Fuzzy * p:double) -&gt; Fuzzy<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        <p>Rises <code>x</code> to the power of <code>p</code>, uses <code>map</code></p>
-
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
             Zero
           </code>
-          <div class="tip" id="35">
-            <strong>Signature:</strong>Fuzzy<br />
+          <div class="tip" id="34">
+            <strong>Signature:</strong> Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Fuzzy set comprized from 11 zero <span class="math">\(\alpha\)</span>-cuts</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L35-35" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -373,9 +393,9 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
             <li><a href="/FSharp.Fuzzy/index.html">Home page</a></li>
             <li class="divider"></li>
             <li><a href="http://nuget.org/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">Source Code on GitHub</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
             
             <li class="nav-header">Getting started</li>
             <li><a href="/FSharp.Fuzzy/tutorial.html">Sample tutorial</a></li>
@@ -386,6 +406,6 @@ Accepts array of intervals comprising <span class="math">\(\alpha\)</span>-cuts,
         </div>
       </div>
     </div>
-    <a href="http://github.com/dsevastianov/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="http://github.com/fsprojects/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   </body>
   </html>

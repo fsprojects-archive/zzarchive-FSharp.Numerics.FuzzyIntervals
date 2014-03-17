@@ -25,7 +25,7 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li><a href="http://fsharp.org">fsharp.org</a></li>
-          <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">github page</a></li>
+          <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">github page</a></li>
         </ul>
         <h3 class="muted"><a href="/FSharp.Fuzzy/index.html">FSharp.Fuzzy</a></h3>
       </div>
@@ -56,12 +56,13 @@
             alpha total level
           </code>
           <div class="tip" id="1">
-            <strong>Signature:</strong>total:int -&gt; level:int -&gt; decimal&lt;1&gt;<br />
+            <strong>Signature:</strong> total:int -&gt; level:int -&gt; decimal&lt;MeasureOne&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Converts number of the level in <span class="math">\(\alpha\)</span>-cut array to the value of membership function <span class="math">\(\mu\)</span></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L74-74" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -71,7 +72,7 @@
             binary f a b
           </code>
           <div class="tip" id="2">
-            <strong>Signature:</strong>f:(Interval * Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
+            <strong>Signature:</strong> f:(Interval * Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -83,6 +84,7 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
 
 <p><em>Important!</em> <code>a</code> and <code>b</code> should have same number of <span class="math">\(\alpha\)</span>-cuts</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L99-99" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -92,12 +94,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             distance a b
           </code>
           <div class="tip" id="3">
-            <strong>Signature:</strong>a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
+            <strong>Signature:</strong> a:Fuzzy -&gt; b:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Calculates distance between two fuzzy sets <code>a</code> and <code>b</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L120-120" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -107,12 +110,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             interval (a, b, c, d)
           </code>
           <div class="tip" id="4">
-            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates trapezoid with 11 <span class="math">\(\alpha\)</span>-cuts which gives increment of 0.1 in <span class="math">\(\mu\)</span> from one <span class="math">\(\alpha\)</span>-cut to the next</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L84-84" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -122,12 +126,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             number (a, b, c)
           </code>
           <div class="tip" id="5">
-            <strong>Signature:</strong>(a:decimal * b:decimal * c:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> (a:decimal * b:decimal * c:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates triangular fuzzy set with bottom <span class="math">\(\alpha\)</span>-cut <code>{a,c}</code> and zero-length top <span class="math">\(\alpha\)</span>-cut <code>b</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L87-87" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -137,12 +142,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             plot a
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong>a:Fuzzy -&gt; (decimal * decimal&lt;1&gt;) []<br />
+            <strong>Signature:</strong> a:Fuzzy -&gt; (decimal * decimal&lt;MeasureOne&gt;) []<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Represents fuzzy set <code>a</code> for drawing a chart</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L129-129" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -152,12 +158,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             point a
           </code>
           <div class="tip" id="7">
-            <strong>Signature:</strong>a:decimal -&gt; Fuzzy<br />
+            <strong>Signature:</strong> a:decimal -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates fuzzy representation of zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L90-90" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -167,12 +174,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             risk a
           </code>
           <div class="tip" id="8">
-            <strong>Signature:</strong>a:Fuzzy -&gt; decimal<br />
+            <strong>Signature:</strong> a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Calculates weighted risk of fuzzy set <code>a</code>, i.e. the ratio between its width and the middle on each <span class="math">\(\alpha\)</span>-cut</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L126-126" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -182,12 +190,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             trapezoid levels (a, b, c, d)
           </code>
           <div class="tip" id="9">
-            <strong>Signature:</strong>levels:int -&gt; (a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
+            <strong>Signature:</strong> levels:int -&gt; (a:decimal * b:decimal * c:decimal * d:decimal) -&gt; Fuzzy<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates trapezoid fuzzy set with bottom <span class="math">\(\alpha\)</span>-cut <code>{a,d}</code> and top <span class="math">\(\alpha\)</span>-cut <code>{b,c}</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L77-77" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -197,7 +206,7 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             unary f a
           </code>
           <div class="tip" id="10">
-            <strong>Signature:</strong>f:(Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; decimal<br />
+            <strong>Signature:</strong> f:(Interval -&gt; decimal) -&gt; a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -206,6 +215,7 @@ applied to each <span class="math">\(\alpha\)</span>-cut of <code>a</code> weigh
 <span class="math">\(W f = \frac{\sum_{\alpha}\alpha f}{\sum_{\alpha}\alpha}\)</span>
 Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where <span class="math">\(n\)</span> - number of <span class="math">\(\alpha\)</span>-cuts</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L112-112" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -215,12 +225,13 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             width a
           </code>
           <div class="tip" id="11">
-            <strong>Signature:</strong>a:Fuzzy -&gt; decimal<br />
+            <strong>Signature:</strong> a:Fuzzy -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Calculates weighted width of fuzzy set <code>a</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Fuzzy.fs#L123-123" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -233,9 +244,9 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
             <li><a href="/FSharp.Fuzzy/index.html">Home page</a></li>
             <li class="divider"></li>
             <li><a href="http://nuget.org/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">Source Code on GitHub</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
             
             <li class="nav-header">Getting started</li>
             <li><a href="/FSharp.Fuzzy/tutorial.html">Sample tutorial</a></li>
@@ -246,6 +257,6 @@ Note that <span class="math">\(\sum_{\alpha}\alpha = \frac{n}{2}\)</span> where 
         </div>
       </div>
     </div>
-    <a href="http://github.com/dsevastianov/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="http://github.com/fsprojects/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   </body>
   </html>

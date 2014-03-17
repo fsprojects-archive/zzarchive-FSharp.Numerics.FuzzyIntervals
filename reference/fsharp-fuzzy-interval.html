@@ -25,7 +25,7 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li><a href="http://fsharp.org">fsharp.org</a></li>
-          <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">github page</a></li>
+          <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">github page</a></li>
         </ul>
         <h3 class="muted"><a href="/FSharp.Fuzzy/index.html">FSharp.Fuzzy</a></h3>
       </div>
@@ -58,12 +58,13 @@
             a
           </code>
           <div class="tip" id="12">
-            <strong>Signature:</strong>decimal<br />
+            <strong>Signature:</strong> decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Lower bound</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L13-13" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -73,12 +74,13 @@
             b
           </code>
           <div class="tip" id="13">
-            <strong>Signature:</strong>decimal<br />
+            <strong>Signature:</strong> decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Upper bound</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L15-15" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -96,12 +98,13 @@
             Middle
           </code>
           <div class="tip" id="18">
-            <strong>Signature:</strong>decimal<br />
+            <strong>Signature:</strong> decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Middle point between <code>a</code> and <code>b</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L18-18" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -115,16 +118,17 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
             ( - )(x, y)
           </code>
-          <div class="tip" id="20">
-            <strong>Signature:</strong>(x:decimal * y:Interval) -&gt; Interval<br />
+          <div class="tip" id="35">
+            <strong>Signature:</strong> (x:decimal * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Subtract decimal <code>y</code> from interval <code>x</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L57-57" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -134,12 +138,13 @@
             ( - )(x, y)
           </code>
           <div class="tip" id="36">
-            <strong>Signature:</strong>(x:Interval * y:decimal) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:decimal) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Subtract decimal <code>y</code> from interval <code>x</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L49-49" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -149,13 +154,14 @@
             ( - )(x, y)
           </code>
           <div class="tip" id="37">
-            <strong>Signature:</strong>(x:Interval * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Subtract <code>y</code> from <code>x</code>, implemetation is simplified for performance reasons as it is easy to proof that for any intervals
 <code>a'=x.a-y.b</code> and <code>b'=x.b-y.a</code> gives widest possible resulting interval <code>a',b'</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L41-41" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -165,12 +171,13 @@
             ( * )(x, y)
           </code>
           <div class="tip" id="38">
-            <strong>Signature:</strong>(x:decimal * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:decimal * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Multiply interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L51-51" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -180,12 +187,13 @@
             ( * )(x, y)
           </code>
           <div class="tip" id="39">
-            <strong>Signature:</strong>(x:Interval * y:decimal) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:decimal) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Multiply interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L43-43" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -195,12 +203,13 @@
             ( * )(x, y)
           </code>
           <div class="tip" id="40">
-            <strong>Signature:</strong>(x:Interval * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Multiply <code>x</code> by <code>y</code>, uses <code>operation</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L27-27" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -210,12 +219,13 @@
             ( / )(x, y)
           </code>
           <div class="tip" id="41">
-            <strong>Signature:</strong>(x:decimal * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:decimal * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Divide interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L53-53" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -225,12 +235,13 @@
             ( / )(x, y)
           </code>
           <div class="tip" id="42">
-            <strong>Signature:</strong>(x:Interval * y:decimal) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:decimal) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Divide interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L45-45" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -240,12 +251,13 @@
             ( / )(x, y)
           </code>
           <div class="tip" id="43">
-            <strong>Signature:</strong>(x:Interval * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Divide <code>x</code> by <code>y</code>, uses <code>operation</code>, 'y` cannot contain zero</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L33-33" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -255,12 +267,13 @@
             ( + )(x, y)
           </code>
           <div class="tip" id="44">
-            <strong>Signature:</strong>(x:decimal * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:decimal * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Add interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L55-55" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -270,12 +283,13 @@
             ( + )(x, y)
           </code>
           <div class="tip" id="45">
-            <strong>Signature:</strong>(x:Interval * y:decimal) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:decimal) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Add interval <code>x</code> by decimal <code>y</code>, decimal is represented as zero-length interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L47-47" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -285,13 +299,14 @@
             ( + )(x, y)
           </code>
           <div class="tip" id="46">
-            <strong>Signature:</strong>(x:Interval * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Add <code>x</code> to <code>y</code>, implemetation is simplified for performance reasons as it is easy to proof that for any intervals
 <code>a'=x.a+y.a</code> and <code>b'=x.b+y.b</code> gives widest possible resulting interval <code>a',b'</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L38-38" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -301,12 +316,13 @@
             distance(x, y)
           </code>
           <div class="tip" id="47">
-            <strong>Signature:</strong>(x:Interval * y:Interval) -&gt; decimal<br />
+            <strong>Signature:</strong> (x:Interval * y:Interval) -&gt; decimal<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Distance between <code>x</code> by <code>y</code> calculated as distance between their middle points</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L61-61" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -316,13 +332,14 @@
             operation(f (x, y))
           </code>
           <div class="tip" id="48">
-            <strong>Signature:</strong>(f:(decimal -&gt; decimal -&gt; decimal)) -&gt; (x:Interval * y:Interval) -&gt; Interval<br />
+            <strong>Signature:</strong> (f:(decimal -&gt; decimal -&gt; decimal)) -&gt; (x:Interval * y:Interval) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Generic binary operation over two intervals compliant with pivotal rule of interval mathematics - 
 operation should result in widest possible interval</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L21-21" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -332,12 +349,13 @@ operation should result in widest possible interval</p>
             pow(x, p)
           </code>
           <div class="tip" id="49">
-            <strong>Signature:</strong>(x:Interval * p:double) -&gt; Interval<br />
+            <strong>Signature:</strong> (x:Interval * p:double) -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Rises <code>x</code> to the power of <code>p</code></p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L59-59" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -347,12 +365,13 @@ operation should result in widest possible interval</p>
             Zero
           </code>
           <div class="tip" id="50">
-            <strong>Signature:</strong>Interval<br />
+            <strong>Signature:</strong> Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Interval with <code>a</code> and <code>b</code> equal zero</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L31-31" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
       <tr>
@@ -362,12 +381,13 @@ operation should result in widest possible interval</p>
             zeroLength(x)
           </code>
           <div class="tip" id="51">
-            <strong>Signature:</strong>x:decimal -&gt; Interval<br />
+            <strong>Signature:</strong> x:decimal -&gt; Interval<br />
                       </div>
         </td>
         <td class="xmldoc">
         <p>Creates interval of zero length</p>
 
+            <a href="http://github.com/fsprojects/FSharp.Fuzzy/tree/master/src/FSharp.Fuzzy/Interval.fs#L29-29" class="github-link">Go to GitHub source</a>
         </td>
       </tr>
     </tbody>
@@ -380,9 +400,9 @@ operation should result in widest possible interval</p>
             <li><a href="/FSharp.Fuzzy/index.html">Home page</a></li>
             <li class="divider"></li>
             <li><a href="http://nuget.org/packages/FSharp.Fuzzy">Get Library via NuGet</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy">Source Code on GitHub</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
-            <li><a href="http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt">License</a></li>
+            <li><a href="http://github.com/fsprojects/FSharp.Fuzzy/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
             
             <li class="nav-header">Getting started</li>
             <li><a href="/FSharp.Fuzzy/tutorial.html">Sample tutorial</a></li>
@@ -393,6 +413,6 @@ operation should result in widest possible interval</p>
         </div>
       </div>
     </div>
-    <a href="http://github.com/dsevastianov/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="http://github.com/fsprojects/FSharp.Fuzzy"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   </body>
   </html>
