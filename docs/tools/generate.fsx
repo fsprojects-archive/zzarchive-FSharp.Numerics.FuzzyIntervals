@@ -8,20 +8,23 @@ let referenceBinaries = [ "FSharp.Fuzzy.dll" ]
 // Web site location for the generated documentation
 let website = "/FSharp.Fuzzy"
 
+let githubLink = "http://github.com/fsprojects/FSharp.Fuzzy"
+
 // Specify more information about your project
 let info =
   [ "project-name", "FSharp.Fuzzy"
     "project-author", "Dmitry Sevastianov"
     "project-summary", "Library of interval and fuzzy mathematics"
-    "project-github", "http://github.com/dsevastianov/FSharp.Fuzzy"
+    "project-github", "http://github.com/fsprojects/FSharp.Fuzzy"
     "project-nuget", "http://nuget.org/packages/FSharp.Fuzzy" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below
 // --------------------------------------------------------------------------------------
 
-#I "../../packages/FSharp.Formatting.2.2.12-beta/lib/net40"
-#I "../../packages/RazorEngine.3.3.0/lib/net40/"
+#I "../../packages/FSharp.Formatting.2.4.1/lib/net40"
+#I "../../packages/RazorEngine.3.3.0/lib/net40"
+#I "../../packages/FSharp.Compiler.Service.0.0.36/lib/net40"
 #r "../../packages/Microsoft.AspNet.Razor.2.0.30506.0/lib/net40/System.Web.Razor.dll"
 #r "../../packages/FAKE/tools/FakeLib.dll"
 #r "RazorEngine.dll"
@@ -34,8 +37,6 @@ open Fake.FileHelper
 open FSharp.Literate
 open FSharp.MetadataFormat
 
-// When called from 'build.fsx', use the public project URL as <root>
-// otherwise, use the current 'output' directory.
 #if RELEASE
 let root = website
 #else
@@ -48,7 +49,7 @@ let content    = __SOURCE_DIRECTORY__ @@ "../content"
 let output     = __SOURCE_DIRECTORY__ @@ "../output"
 let files      = __SOURCE_DIRECTORY__ @@ "../files"
 let templates  = __SOURCE_DIRECTORY__ @@ "templates"
-let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/FSharp.Formatting.2.2.12-beta/"
+let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/FSharp.Formatting.2.4.1/"
 let docTemplate = formatting @@ "templates/docpage.cshtml"
 
 // Where to look for *.csproj templates (in this order)
@@ -69,7 +70,10 @@ let buildReference () =
   for lib in referenceBinaries do
     MetadataFormat.Generate
       ( bin @@ lib, output @@ "reference", layoutRoots, 
-        parameters = ("root", root)::info )
+        parameters = ("root", root)::info,
+        sourceRepo = githubLink @@ "tree/master",
+        sourceFolder = __SOURCE_DIRECTORY__ @@ ".." @@ "..",
+        publicOnly = true )
 
 // Build documentation from `fsx` and `md` files in `docs/content`
 let buildDocumentation () =

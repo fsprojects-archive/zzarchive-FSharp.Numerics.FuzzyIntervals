@@ -62,9 +62,9 @@ The library is available under Public Domain license, which allows modification 
 redistribution for both commercial and non-commercial purposes. For more information see the 
 [License file][license] in the GitHub repository. 
 
-  [content]: https://github.com/dsevastianov/FSharp.Fuzzy/tree/master/docs/content
-  [gh]: https://github.com/dsevastianov/FSharp.Fuzzy
-  [issues]: https://github.com/dsevastianov/FSharp.Fuzzy/issues
-  [readme]: https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/README.md
-  [license]: https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt
+  [content]: https://github.com/fsprojects/FSharp.Fuzzy/tree/master/docs/content
+  [gh]: https://github.com/fsprojects/FSharp.Fuzzy
+  [issues]: https://github.com/fsprojects/FSharp.Fuzzy/issues
+  [readme]: https://github.com/fsprojects/FSharp.Fuzzy/blob/master/README.md
+  [license]: https://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt
 *)

@@ -5,9 +5,9 @@
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <licenseUrl>http://github.com/dsevastianov/FSharp.Fuzzy/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://dsevastianov.github.io/FSharp.Fuzzy</projectUrl>
-    <iconUrl>https://github.com/dsevastianov/FSharp.Fuzzy/blob/master/docs/files/img/logo.png</iconUrl>
+    <licenseUrl>http://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://fsprojects.github.io/FSharp.Fuzzy</projectUrl>
+    <iconUrl>https://github.com/fsprojects/FSharp.Fuzzy/blob/master/docs/files/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>@summary@</summary>
     <description>@description@</description>

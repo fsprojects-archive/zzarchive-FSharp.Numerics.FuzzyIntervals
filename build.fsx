@@ -44,9 +44,9 @@ let testAssemblies = "tests/*/bin/*/FSharp.Fuzzy*Tests*.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted 
-let gitHome = "https://github.com/dsevastianov"
+let gitHome = "https://github.com/fsprojects"
 // The name of the project on GitHub
-let gitName = "Fuzzy"
+let gitName = "FSharp.Fuzzy"
 
 // --------------------------------------------------------------------------------------
 // END TODO: The rest of the file includes standard build steps 
