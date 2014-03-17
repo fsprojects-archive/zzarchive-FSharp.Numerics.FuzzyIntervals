@@ -56,7 +56,6 @@
     <Compile Include="Interval.fs" />
     <Compile Include="Fuzzy.fs" />
     <None Include="Script.fsx" />
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
