@@ -1,8 +1,8 @@
 ﻿#load "Interval.fs"
-open FSharp.Fuzzy
+open FSharp.Numerics.FuzzyIntervals
 
 #load "Fuzzy.fs"
-open FSharp.Fuzzy
+open FSharp.Numerics.FuzzyIntervals
 
 let i1 = Fuzzy.number(0.0011m,0.0012m,0.0014m)
 let i2 = Fuzzy.number(0.0008m,0.0011m,0.0016m)

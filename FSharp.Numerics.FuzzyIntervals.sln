@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1F1B4F0F-2998-4D74-865B-9122611C2B14}"
 	ProjectSection(SolutionItems) = preProject
@@ -35,9 +35,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{8E6D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD-2B06-4030-9F0F-DC548F98E1C4}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Fuzzy.Tests", "tests\FSharp.Fuzzy.Tests\FSharp.Fuzzy.Tests.fsproj", "{E789C72A-5CFD-436B-8EF1-61AA2852A89F}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tests", "tests\FSharp.Fuzzy.Tests\Tests.fsproj", "{E789C72A-5CFD-436B-8EF1-61AA2852A89F}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Fuzzy", "src\FSharp.Fuzzy\FSharp.Fuzzy.fsproj", "{7E90D6CE-A10B-4858-A5BC-41DF7250CBCA}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Numerics.FuzzyIntervals", "src\FSharp.Numerics.FuzzyIntervals\FSharp.Numerics.FuzzyIntervals.fsproj", "{7E90D6CE-A10B-4858-A5BC-41DF7250CBCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

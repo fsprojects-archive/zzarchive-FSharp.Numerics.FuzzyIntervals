@@ -4,19 +4,19 @@
 // --------------------------------------------------------------------------------------
 
 // Binaries that have XML documentation (in a corresponding generated XML file)
-let referenceBinaries = [ "FSharp.Fuzzy.dll" ]
+let referenceBinaries = [ "FSharp.Numerics.FuzzyIntervals.dll" ]
 // Web site location for the generated documentation
-let website = "/FSharp.Fuzzy"
+let website = "/FSharp.Numerics.FuzzyIntervals"
 
-let githubLink = "http://github.com/fsprojects/FSharp.Fuzzy"
+let githubLink = "http://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "FSharp.Fuzzy"
+  [ "project-name", "FSharp.Numerics.FuzzyIntervals"
     "project-author", "Dmitry Sevastianov"
     "project-summary", "Library of interval and fuzzy mathematics"
-    "project-github", "http://github.com/fsprojects/FSharp.Fuzzy"
-    "project-nuget", "http://nuget.org/packages/FSharp.Fuzzy" ]
+    "project-github", "http://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals"
+    "project-nuget", "http://nuget.org/packages/FSharp.Numerics.FuzzyIntervals" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below

@@ -1,7 +1,7 @@
 (*** hide ***)
 // This block of code is omitted in the generated HTML documentation. Use 
 // it to define helpers that you do not want to show in the documentation.
-#I "../../bin"
+#I "../../bin/"
 
 (**
 F# Fuzzy Library
@@ -13,8 +13,8 @@ Documentation
   <div class="span1"></div>
   <div class="span6">
     <div class="well well-small" id="nuget">
-      The F# Fuzzy library can be <a href="https://nuget.org/packages/FSharp.Fuzzy">installed from NuGet</a>:
-      <pre>PM> Install-Package FSharp.Fuzzy</pre>
+      The F# Fuzzy library can be <a href="https://nuget.org/packages/FSharp.Numerics.FuzzyIntervals">installed from NuGet</a>:
+      <pre>PM> Install-Package FSharp.Numerics.FuzzyIntervals</pre>
     </div>
   </div>
   <div class="span1"></div>
@@ -28,8 +28,8 @@ Example
 Fuzzy valuation of 2-year bond with 10% coupon.
 
 *)
-#r "FSharp.Fuzzy.dll"
-open FSharp.Fuzzy
+#r "FSharp.Numerics.FuzzyIntervals.dll"
+open FSharp.Numerics.FuzzyIntervals
 
 let i1 = Fuzzy.number(0.0011m,0.0012m,0.0014m)
 let i2 = Fuzzy.number(0.0008m,0.0011m,0.0016m)
@@ -62,9 +62,9 @@ The library is available under Public Domain license, which allows modification 
 redistribution for both commercial and non-commercial purposes. For more information see the 
 [License file][license] in the GitHub repository. 
 
-  [content]: https://github.com/fsprojects/FSharp.Fuzzy/tree/master/docs/content
-  [gh]: https://github.com/fsprojects/FSharp.Fuzzy
-  [issues]: https://github.com/fsprojects/FSharp.Fuzzy/issues
-  [readme]: https://github.com/fsprojects/FSharp.Fuzzy/blob/master/README.md
-  [license]: https://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt
+  [content]: https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/tree/master/docs/content
+  [gh]: https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals
+  [issues]: https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/issues
+  [readme]: https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/blob/master/README.md
+  [license]: https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/blob/master/LICENSE.txt
 *)

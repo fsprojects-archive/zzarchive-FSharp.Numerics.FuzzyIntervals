@@ -8,10 +8,10 @@
     <ProjectGuid>e789c72a-5cfd-436b-8ef1-61aa2852a89f</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>FSharp.ProjectTemplate.Tests</RootNamespace>
-    <AssemblyName>FSharp.Fuzzy.Tests</AssemblyName>
+    <AssemblyName>Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
-    <Name>FSharp.ProjectTemplate.Tests</Name>
+    <Name>Tests</Name>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
@@ -81,8 +81,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <ProjectReference Include="..\..\src\FSharp.Fuzzy\FSharp.Fuzzy.fsproj">
-      <Name>FSharp.Fuzzy</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\FSharp.Numerics.FuzzyIntervals\FSharp.Numerics.FuzzyIntervals.fsproj">
+      <Name>FSharp.Numerics.FuzzyIntervals</Name>
       <Project>{7e90d6ce-a10b-4858-a5bc-41df7250cbca}</Project>
       <Private>True</Private>
     </ProjectReference>

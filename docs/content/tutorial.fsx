@@ -1,5 +1,5 @@
 (*** hide ***)
-#I "../../bin"
+#I "../../bin/"
 
 (**
 Tutorial
@@ -7,7 +7,7 @@ Tutorial
 
 TBD 
 *)
-#r "FSharp.Fuzzy.dll"
-open FSharp.Fuzzy
+#r "FSharp.Numerics.FuzzyIntervals.dll"
+open FSharp.Numerics.FuzzyIntervals
 
 let interval = { a= 100m; b = 200m }

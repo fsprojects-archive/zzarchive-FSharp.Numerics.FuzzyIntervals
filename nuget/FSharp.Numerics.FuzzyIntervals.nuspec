@@ -5,9 +5,9 @@
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <licenseUrl>http://github.com/fsprojects/FSharp.Fuzzy/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://fsprojects.github.io/FSharp.Fuzzy</projectUrl>
-    <iconUrl>https://github.com/fsprojects/FSharp.Fuzzy/blob/master/docs/files/img/logo.png</iconUrl>
+    <licenseUrl>http://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://fsprojects.github.io/FSharp.Numerics.FuzzyIntervals</projectUrl>
+    <iconUrl>https://github.com/fsprojects/FSharp.Numerics.FuzzyIntervals/blob/master/docs/files/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>@summary@</summary>
     <description>@description@</description>
@@ -17,6 +17,6 @@
     <dependencies />
   </metadata>
   <files>
-    <file src="FSharp.Fuzzy.dll" target="lib/net40" />
+    <file src="FSharp.Numerics.FuzzyIntervals.dll" target="lib/net40" />
   </files>
 </package>

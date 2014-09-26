@@ -1,6 +1,6 @@
-﻿module FSharp.Fuzzy.Tests.Interval
+﻿module FSharp.Numerics.FuzzyIntervals.Tests.Interval
 
-open FSharp.Fuzzy
+open FSharp.Numerics.FuzzyIntervals
 open NUnit.Framework
 open FsUnit
 

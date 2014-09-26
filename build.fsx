@@ -21,7 +21,7 @@ open System
 
 // The name of the project 
 // (used by attributes in AssemblyInfo, name of a NuGet package and directory in 'src')
-let project = "FSharp.Fuzzy"
+let project = "FSharp.Numerics.FuzzyIntervals"
 
 // Short summary of the project
 // (used as description in AssemblyInfo and as a short summary for NuGet package)
@@ -38,15 +38,15 @@ let tags = "fhsarp F# fuzzy interval"
 
 // File system information 
 // (<solutionFile>.sln is built during the building process)
-let solutionFile  = "FSharp.Fuzzy"
+let solutionFile  = "FSharp.Numerics.FuzzyIntervals"
 // Pattern specifying assemblies to be tested using NUnit
-let testAssemblies = "tests/*/bin/*/FSharp.Fuzzy*Tests*.dll"
+let testAssemblies = "tests/*/bin/*/Tests.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted 
 let gitHome = "https://github.com/fsprojects"
 // The name of the project on GitHub
-let gitName = "FSharp.Fuzzy"
+let gitName = "FSharp.Numerics.FuzzyIntervals"
 
 // --------------------------------------------------------------------------------------
 // END TODO: The rest of the file includes standard build steps 
