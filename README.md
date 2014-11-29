@@ -5,3 +5,12 @@ This is very basic library of fuzzy and interval calculus. Find more on [Project
 It includes implementation of arithmetic operations for  Interval and Fuzzy classes as well as some specific measures. 
 The library is build to support calculations for [Fuzzy Fsharp series](http://fuzzyfsharp.wordpress.com/) dedicated to 
 application of techniques of Soft Computing in finance. 
+
+## Maintainer(s)
+
+- [@dsevastianov](https://github.com/dsevastianov)
+- [@dmitry-a-morozov](https://github.com/dmitry-a-morozov)
+- [@orlandpm](https://github.com/orlandpm)
+- [@soloveichik](https://github.com/soloveichik)
+
+The default maintainer account for projects under "fsprojects" is [@fsgit](https://github.com/fsgit) - F# Community Project Incubation Space (repo management)
