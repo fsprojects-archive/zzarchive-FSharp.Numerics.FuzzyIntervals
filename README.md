@@ -1,4 +1,7 @@
-FSharp.Numerics.FuzzyIntervals
+[![Issue Stats](http://issuestats.com/github/fsprojects/FSharp.Numerics.FuzzyIntervals/badge/issue)](http://issuestats.com/github/fsprojects/FSharp.Numerics.FuzzyIntervals)
+[![Issue Stats](http://issuestats.com/github/fsprojects/FSharp.Numerics.FuzzyIntervals/badge/pr)](http://issuestats.com/github/fsprojects/FSharp.Numerics.FuzzyIntervals)
+
+FSharp.Numerics.FuzzyIntervals [![NuGet Status](http://img.shields.io/nuget/v/FSharp.Numerics.FuzzyIntervals.svg?style=flat)](https://www.nuget.org/packages/FSharp.Numerics.FuzzyIntervals/)
 =====
 
 This is very basic library of fuzzy and interval calculus. Find more on [Project web page](http://fsprojects.github.io/FSharp.Numerics.FuzzyIntervals/)
